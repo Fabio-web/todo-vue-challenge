@@ -1,0 +1,78 @@
+.input {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   gap: 3px;
+   width: fit-content;
+
+   .label {
+      position: absolute;
+      padding: 10px 27px;
+      text-transform: uppercase;
+      font: {
+         family: $font-family-secondary;
+         size: 12px;
+         weight: 900;
+      };
+   }
+
+   .item {
+      width: 200px;
+      border: 1px solid #F2F2F2;
+      border-radius: 16px;
+      padding: 10px 27px;
+      font-size: 14px;
+      outline: unset;
+
+      &:disabled {
+         background: #F2F2F2;
+         border-color: #E0E0E0;
+      }
+
+      &::placeholder {
+         color: #BDBDBD;
+      }
+   }
+
+   &:not(&-error):focus-within {
+      .item {
+         border-color: $color-text-black;
+      }
+   }
+
+   &-label .item {
+      padding: 27px 27px 10px 27px;
+   }
+
+   &-error {
+      .label {
+         color: #D32F2F;
+      }
+
+      .item {
+         border-color: #D32F2F;
+      }
+
+      .helper {
+         color: #D32F2F;
+      }
+   }
+
+   &-fw {
+      width: 100%;
+
+      .item {
+         width: 100%;
+      }
+   }
+
+   &.sm {
+      .item {
+         padding: 10px 12px;
+      }
+
+      span[class^=material-icons] {
+         padding: 10px 12px;
+      }
+   }
+}

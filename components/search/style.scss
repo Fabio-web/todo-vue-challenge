@@ -1,0 +1,139 @@
+.searchComponent {
+   .background {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(79, 79, 79, 0.4);
+   }
+
+   .inner {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      background-color: white;
+      padding: 90px 0;
+
+      transition: 0.5s ease-in-out;
+
+      .content {
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         gap: 44px;
+
+         .form {
+            display: grid;
+            grid-template-columns: 1fr 1fr auto;
+            gap: 10px;
+
+            div:last-child {
+               width: fit-content;
+            }
+
+            @media (max-width: 1010px) {
+               grid-template-columns: 1fr;
+
+               div:last-child {
+                  place-self: flex-end;
+               }
+            }
+         }
+
+         .settings {
+            display: flex;
+            justify-content: space-between;
+
+            .locationList, .guestSetting {
+               flex: 0 0 calc(100%/3);
+            }
+
+            @media (max-width: 1010px) {
+               flex-direction: column;
+               gap: 50px;
+
+               .locationList, .guestSetting {
+                  flex: 0 0 100%;
+               }
+            }
+
+            .locationList {
+               padding-left: 27px;
+               display: flex;
+               flex-direction: column;
+               gap: 33px;
+
+               .location {
+                  font: {
+                     family: $font-family-secondary;
+                     size: 14px;
+                     weight: 400;
+                  };
+
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+               }
+            }
+
+            .guestSetting {
+               display: flex;
+               flex-direction: column;
+               gap: 50px;
+               padding-left: 27px;
+
+               @media (max-width: 1010px) {
+                  flex-direction: row;
+               }
+
+               .title {
+                  font: {
+                     family: $font-family-secondary;
+                     size: 14px;
+                     weight: 700;
+                  };
+               }
+
+               .helper {
+                  font: {
+                     family: $font-family-secondary;
+                     size: 14px;
+                     weight: 400;
+                  };
+
+                  color: #BDBDBD;
+               }
+
+               .counter {
+                  display: flex;
+                  gap: 15px;
+                  align-items: center;
+                  margin-top: 15px;
+
+                  .symbol {
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     width: 23px;
+                     height: 23px;
+                     border: 1px solid #828282;
+                     border-radius: 4px;
+                     cursor: pointer;
+
+                     &:hover {
+                        border-color: $color-primary;
+                        color: $color-primary;
+                     }
+                  }
+               }
+            }
+
+            .spaces {
+               width: 133px;
+            }
+         }
+      }
+   }
+}
