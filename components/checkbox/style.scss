@@ -1,0 +1,11 @@
+.checkbox {
+   display: flex;
+   align-items: center;
+   gap: 7px;
+
+   &.strikethrough {
+      .checkbox-text {
+         text-decoration: line-through;
+      }
+   }
+}
