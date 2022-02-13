@@ -1,0 +1,40 @@
+.tab {
+   position: relative;
+   width: 100%;
+
+   .list {
+      display: flex;
+
+      &.start {justify-content: flex-start;}
+      &.center {justify-content: center;}
+      &.end {justify-content: flex-end;}
+      &.between {justify-content: space-between;}
+      &.around {justify-content: space-around;}
+
+      .anchor {
+         flex: 0 0 100%;
+         text-align: center;
+         padding: 20px 0;
+         cursor: pointer;
+      }
+   }
+
+   .bar {
+      height: 1px;
+      width: 100%;
+      background-color: $color-smoke;
+
+      &:after {
+         position: absolute;
+         transition: 0.3s ease-in-out;
+         left: var(--position);
+         transform: translateY(-4px) translateX(-50%);
+         content: "";
+         width: var(--tickWidth);
+         height: 4px;
+
+         background: $color-primary;
+         border-radius: 4px 4px 0 0;
+      }
+   }
+}
