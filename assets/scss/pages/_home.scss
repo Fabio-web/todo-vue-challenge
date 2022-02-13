@@ -1,5 +1,23 @@
 .homePage {
-   h2 {
-      text-align: center;
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+
+   .form {
+      display: flex;
+      gap: 25px;
+   }
+
+   .taskList {
+      display: flex;
+      flex-direction: column;
+      gap: 27px;
+
+      .taskText {
+         font: {
+            size: 18px;
+            weight: 500;
+         }
+      }
    }
 }
