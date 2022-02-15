@@ -1,5 +1,5 @@
 <template>
-   <button ref="button" :class="[
+   <button :type="type" ref="button" :class="[
          'button',
          variant,
          size,
@@ -22,6 +22,7 @@ import Vue from "vue"
 export default Vue.extend({
    name: "Button",
    props: {
+      type: String,
       disabled: Boolean,
       disableShadow: Boolean,
       startIcon: String,
