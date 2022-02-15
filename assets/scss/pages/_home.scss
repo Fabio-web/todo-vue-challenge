@@ -13,11 +13,28 @@
       flex-direction: column;
       gap: 27px;
 
-      .taskText {
-         font: {
-            size: 18px;
-            weight: 500;
+      .task {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+
+         .checkbox-text {
+            font: {
+               size: 18px;
+               weight: 500;
+            }
+         }
+
+         .delete {
+            color: $color-smoke;
+            cursor: pointer;
+            padding: 0 10px;
          }
       }
+   }
+
+   .delAll {
+      display: flex;
+      justify-content: flex-end;
    }
 }
